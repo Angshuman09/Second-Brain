@@ -1,5 +1,3 @@
-
-
 ## ==Deep Learning==
 
 Deep Learning is a subfield of **Machine Learning** that uses **neural networks with many layers** to learn patterns from large amounts of data. It is inspired by the structure and functioning of the **human brain**, where neurons are connected and transmit signals.
