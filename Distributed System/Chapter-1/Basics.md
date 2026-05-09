@@ -1,5 +1,5 @@
 
-## ==Data-Intensive vs Compute-Intensive Applications==
+## ==Reliable, Scalable, and Maintainable Applications==
 
 ```
 Many applications today are data-intensive, as opposed to compute-intensive.
@@ -72,7 +72,7 @@ Processing a large amount of data together after collecting it over time.
 ---
 # ==What is a database?==
 
-A system designed to ==**store, organize, and retrieve data== efficiently**
+A system designed to ==store, organize, and retrieve data== efficiently
 
 ## Examples
 
@@ -134,26 +134,9 @@ Application code connects and coordinates all of them
 ![[data-system.png]]
 
 ---
-
-## ==Responsibility of the Application==
-
-When multiple systems are used, the application must:
-
-- Keep cache in sync with database
-- Keep search index updated
-- Handle consistency between systems
-
-Example  
-If data is updated in database, cache must also be updated or invalidated
-
----
-
-## ==Important Design Questions==
-
-How to ensure data remains correct even if ==failures== happen  
-How to maintain good ==performance== under heavy load  
-How to ==scale== when users or data increase  
-How to design a clean and usable API
+> we separate database because normal database is not for search, here are some database we use for searching: 
+> - Elasticsearch
+> - Apache Solr
 
 ---
 

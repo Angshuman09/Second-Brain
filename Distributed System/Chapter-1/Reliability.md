@@ -58,21 +58,6 @@ Randomly breaks system to test reliability
 - System keeps running even if one component fails
     
 
-### Modern Trend:
-
-- With large systems/cloud:
-    
-    - Failures increase
-        
-    - Machines can disappear anytime (e.g., AWS instances)
-        
-- Shift to **software fault tolerance**:
-    
-    - System survives even if **entire machine fails**
-        
-    - Enables **rolling updates (no downtime)**
-        
-> A rolling update is a deployment strategy that updates application instances incrementally, replacing old versions with new ones one-by-one or in small batches rather than all at once
 ---
 
 ##  ==Software Errors==
@@ -91,11 +76,6 @@ Randomly breaks system to test reliability
 - Dependency failure (slow/unresponsive service)
     
 - Cascading failures (one failure → chain reaction)
-    
-
-###  Key Idea:
-
-- Bugs stay hidden until rare conditions occur
     
 
 ### Handling:

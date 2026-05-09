@@ -17,11 +17,6 @@ Examples
 - data volume
     
 
-
-> Scalability is not a yes or no property
-> 
-> It depends on how the system handles growth
-
 ---
 
 ## Example: Twitter
@@ -33,7 +28,14 @@ Operations
 - View timeline (read)
     
 
-Reads are much higher than writes
+==Reads are much higher than writes==
+### Posting (writes)
+
+- Around **4–5k tweets per second on average**
+- Peak can go **10–12k tweets/sec**
+### Reading (timeline views)
+
+- Around **300k requests per second**
 
 ![[twitter-example.png]]
 
@@ -84,19 +86,6 @@ Hybrid approach
 - Normal users use precompute
     
 - High follower users use compute on read
-    
-
----
-
-## ==Describing Performance==
-
-After defining load, we check how system behaves under it
-
-Two questions
-
-- If load increases, how does performance change
-    
-- How much resources needed to keep performance same
     
 
 ---
