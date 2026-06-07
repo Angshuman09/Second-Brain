@@ -1,0 +1,226 @@
+{
+  "main": {
+    "id": "3291a808fd48ab1d",
+    "type": "split",
+    "children": [
+      {
+        "id": "26fcc9a1f478f905",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c9436f09bb73c2eb",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "DBMS/Day-2.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Day-2"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "63cabb36ec89cf40",
+    "type": "split",
+    "children": [
+      {
+        "id": "78b5767016f469f2",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1575dfe000fc5b1e",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "54ef42d5579517cc",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "ad25b4d01beac364",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 260.5
+  },
+  "right": {
+    "id": "b8eb9ab38dd385e3",
+    "type": "split",
+    "children": [
+      {
+        "id": "b6ef76313815a700",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0fa2d5f4a23ed368",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Distributed System/Chapter-3/Hash Index and SSTable.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Hash Index and SSTable"
+            }
+          },
+          {
+            "id": "9e9966b806ebe62f",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Distributed System/Chapter-3/Hash Index and SSTable.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Hash Index and SSTable"
+            }
+          },
+          {
+            "id": "13c78cdb528feff6",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "32301d6eaea56bb4",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "29d83904f2f6fa62",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Distributed System/Chapter-3/Hash Index and SSTable.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Hash Index and SSTable"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "c9436f09bb73c2eb",
+  "lastOpenFiles": [
+    "DBMS/Day-1.md",
+    "DBMS/Day-2.md",
+    "DBMS/assets/ELT-diagram.png",
+    "DBMS/assets/DBMS.webp",
+    "DBMS/assets",
+    "Distributed System/Chapter-1/Maintainability.md",
+    "Distributed System/Chapter-1/Scalability.md",
+    "Distributed System/Chapter-1/Reliability.md",
+    "Distributed System/Chapter-1/Basics.md",
+    "Distributed System/assets/backend-arch.png",
+    "Distributed System/assets/response-time.png",
+    "Distributed System/assets/percentile.png",
+    "Distributed System/assets/latency_versus_response_time-4.jpg",
+    "latency_versus_response_time-4.jpg",
+    "Distributed System/assets/twitter-example.png",
+    "Screenshot 2026-04-26 at 4.17.46 PM.png",
+    "Distributed System/Chapter-1/Reliablity",
+    "Distributed System/Chapter-3/2. Hash Index and SSTable.md",
+    "Distributed System/Chapter-3/1. Fundamentals and Index.md",
+    "Distributed System/assets/data-system.png",
+    "Distributed System/Chapter-1",
+    "Distributed System/Chapter-3/3. B-Trees.md",
+    "Distributed System/Link/Overwrite a page on disk.md",
+    "Distributed System/Link/Thread.md",
+    "Distributed System/Link/The page Split problem.md",
+    "Deep learning/Perceptron/1-Perceptron Training & The Perceptron Trick.md",
+    "Deep learning/Perceptron/links/Linear and Non-Linear Classification.md",
+    "Deep learning/Perceptron/links",
+    "Deep learning/Perceptron/0-DL.md",
+    "Deep learning/Perceptron/assets",
+    "Untitled.canvas",
+    "Second.md",
+    "Link/The.md",
+    "Link",
+    "The.md",
+    "Distributed System/Link",
+    "Distributed System/assets"
+  ]
+}

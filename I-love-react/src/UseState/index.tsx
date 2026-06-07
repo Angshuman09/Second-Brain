@@ -9,7 +9,7 @@ const State = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center gap-6">
+    <div className="flex flex-col items-center justify-center gap-6 w-full h-screen">
       <p className="text-5xl font-bold text-gray-800">
         value: {value}
       </p>
