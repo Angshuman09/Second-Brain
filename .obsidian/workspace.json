@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "26fcc9a1f478f905",
+        "id": "44410e316f5fb09d",
         "type": "tabs",
         "children": [
           {
-            "id": "c9436f09bb73c2eb",
+            "id": "808ff2edc8c61ada",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DBMS/Day-2.md",
-                "mode": "source",
+                "file": "Papers implementations/Chord paper.md",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Day-2"
+              "title": "Chord paper"
             }
           }
         ]
@@ -183,10 +183,16 @@
       "bases:Create new base": false
     }
   },
-  "active": "c9436f09bb73c2eb",
+  "active": "808ff2edc8c61ada",
   "lastOpenFiles": [
-    "DBMS/Day-1.md",
+    "human brain/00-How we think?.md",
+    "human brain/Words.md",
+    "Papers implementations/Chord paper.md",
+    "human brain",
+    "Papers implementations/Papers.md",
+    "Papers implementations",
     "DBMS/Day-2.md",
+    "DBMS/Day-1.md",
     "DBMS/assets/ELT-diagram.png",
     "DBMS/assets/DBMS.webp",
     "DBMS/assets",
