@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Papers implementations/Chord paper.md",
-                "mode": "preview",
+                "file": "human brain/Words.md",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Chord paper"
+              "title": "Words"
             }
           }
         ]
@@ -185,8 +185,10 @@
   },
   "active": "808ff2edc8c61ada",
   "lastOpenFiles": [
-    "human brain/00-How we think?.md",
+    "human brain/02-Different types of aggressions.md",
+    "human brain/01-Difference between compassion, empathy and sympathy?.md",
     "human brain/Words.md",
+    "human brain/00-How we think?.md",
     "Papers implementations/Chord paper.md",
     "human brain",
     "Papers implementations/Papers.md",
