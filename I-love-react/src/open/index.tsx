@@ -13,7 +13,7 @@ function Open() {
       <p onClick={()=>navigate('/usememo')} className='text-blue-500 underline cursor-pointer hover:text-blue-800'>usememo</p>
       <p onClick={()=>navigate('/outsidebutton')} className='text-blue-500 underline cursor-pointer hover:text-blue-800'>outside button</p>
       <p onClick={()=>navigate('/hookform')} className='text-blue-500 underline cursor-pointer hover:text-blue-800'>react hook form</p>
-      
+      <p onClick={()=>navigate('/zustand')} className='text-blue-500 underline cursor-pointer hover:text-blue-800'>zustand</p>
       </div>
   )
 }

@@ -9,12 +9,17 @@ import { UseMemo } from './UseMemo';
 import OutsideButton from './Outside-button';
 import HookForm from './ReactHookForm';
 import FieldLogic from './UseFieldArray';
+import {useNavigate} from 'react-router-dom';
+import Zustand from './Zustand/page';
+import { Toaster } from 'react-hot-toast';
 
 const App = () => {
   const {theme, setTheme} = Context();
+  const navigate = useNavigate();
   return (
-    <div className={theme === "dark" ? "bg-gray-900 text-white w-full flex flex-col justify-center items-center gap-10" : "bg-amber-100 text-black w-full h-screen flex justify-center items-center flex-col gap-10"}>
+    <div className={theme === "dark" ? "bg-gray-900 text-white w-full flex flex-col justify-center items-center gap-10 h-screen" : "bg-amber-100 text-black w-full h-screen flex justify-center items-center flex-col gap-10"}>
       <button onClick={()=>setTheme(theme  === "dark" ? "light" : "dark")} className={`text-black bg-amber-500 px-4 py-2 rounded`}>magic</button>
+      <button className="text-black bg-amber-500 px-4 py-2 rounded" onClick={() => navigate('/')}>go homepage</button>
           <Routes>
       <Route path='/' element={<Open/>}/>
       <Route path='/usestate' element={<State/>}/>
@@ -25,7 +30,9 @@ const App = () => {
       <Route path='/outsidebutton' element={<OutsideButton/>}/>
       <Route path='hookform' element={<HookForm/>}/>
       <Route path='/usearray' element={<FieldLogic/>}/>
+      <Route path='/zustand' element={<Zustand/>}/>
     </Routes>
+    <Toaster/>
     </div>
 
   )

@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "44410e316f5fb09d",
+        "id": "9683198fb34c07c8",
         "type": "tabs",
         "children": [
           {
-            "id": "808ff2edc8c61ada",
+            "id": "57110bddd5c8e7e5",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "human brain/Words.md",
-                "mode": "source",
+                "file": "System Design/Relational databases.md",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Words"
+              "title": "Relational databases"
             }
           }
         ]
@@ -41,7 +41,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -78,7 +80,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 260.5
+    "width": 200
   },
   "right": {
     "id": "b8eb9ab38dd385e3",
@@ -183,52 +185,53 @@
       "bases:Create new base": false
     }
   },
-  "active": "808ff2edc8c61ada",
+  "active": "57110bddd5c8e7e5",
   "lastOpenFiles": [
+    "System Design/assets/single-leader.png",
+    "System Design/assets/read-uncommitted.png",
+    "System Design/assets/multi-leader.png",
+    "System Design/Relational databases.md",
+    "System Design/assets/horizontal replication.png",
+    "System Design/assets/horizontal-scalling.png",
+    "System Design/assets/read-committed.png",
+    "System Design/assets/Screenshot 2026-08-02 at 12.28.17 PM.png",
+    "I-love-react/node_modules/node-releases/README.md",
+    "I-love-react/node_modules/zustand/README.md",
+    "I-love-react/node_modules/jiti/README.md",
+    "Words.md",
+    "System Design/assets/serializable.png",
+    "System Design/assets/read-repeated.png",
+    "System Design/assets",
+    "System Design/assets/acid_properties.webp",
+    "System Design/Introduction.md",
+    "Deep learning/Perceptron/0-DL.md",
+    "Low Level/Input  Buffer.md",
+    "Low Level/Basics.md",
+    "Low Level",
+    "Papers implementations/Papers.md",
+    "System Design",
+    "projects/features.md",
+    "projects/Matrichub.md",
+    "projects",
     "human brain/02-Different types of aggressions.md",
     "human brain/01-Difference between compassion, empathy and sympathy?.md",
-    "human brain/Words.md",
     "human brain/00-How we think?.md",
     "Papers implementations/Chord paper.md",
     "human brain",
-    "Papers implementations/Papers.md",
     "Papers implementations",
     "DBMS/Day-2.md",
     "DBMS/Day-1.md",
-    "DBMS/assets/ELT-diagram.png",
-    "DBMS/assets/DBMS.webp",
     "DBMS/assets",
     "Distributed System/Chapter-1/Maintainability.md",
     "Distributed System/Chapter-1/Scalability.md",
     "Distributed System/Chapter-1/Reliability.md",
     "Distributed System/Chapter-1/Basics.md",
-    "Distributed System/assets/backend-arch.png",
-    "Distributed System/assets/response-time.png",
-    "Distributed System/assets/percentile.png",
-    "Distributed System/assets/latency_versus_response_time-4.jpg",
-    "latency_versus_response_time-4.jpg",
-    "Distributed System/assets/twitter-example.png",
-    "Screenshot 2026-04-26 at 4.17.46 PM.png",
     "Distributed System/Chapter-1/Reliablity",
     "Distributed System/Chapter-3/2. Hash Index and SSTable.md",
     "Distributed System/Chapter-3/1. Fundamentals and Index.md",
-    "Distributed System/assets/data-system.png",
     "Distributed System/Chapter-1",
     "Distributed System/Chapter-3/3. B-Trees.md",
-    "Distributed System/Link/Overwrite a page on disk.md",
-    "Distributed System/Link/Thread.md",
-    "Distributed System/Link/The page Split problem.md",
-    "Deep learning/Perceptron/1-Perceptron Training & The Perceptron Trick.md",
-    "Deep learning/Perceptron/links/Linear and Non-Linear Classification.md",
     "Deep learning/Perceptron/links",
-    "Deep learning/Perceptron/0-DL.md",
-    "Deep learning/Perceptron/assets",
-    "Untitled.canvas",
-    "Second.md",
-    "Link/The.md",
-    "Link",
-    "The.md",
-    "Distributed System/Link",
-    "Distributed System/assets"
+    "Untitled.canvas"
   ]
 }
