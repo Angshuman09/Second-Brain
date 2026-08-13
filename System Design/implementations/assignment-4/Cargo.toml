@@ -1,0 +1,9 @@
+[package]
+name = "assignment-4"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+futures-util = "0.3.34"
+rdkafka = { version = "0.39.0", features = ["cmake-build"] }
+tokio = { version = "1.53.1", features = ["full"] }
