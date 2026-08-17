@@ -2635,25 +2635,3 @@ The easiest way to remember Pub/Sub:
 There is no assumption that the broker keeps a history for future subscribers.
 
 ---
-
-# Key Takeaways
-
-1. **Pub/Sub is a messaging pattern for broadcasting events.**
-    
-2. **Publishers send messages to channels/topics rather than directly to subscribers.**
-    
-3. **Subscribers receive messages from channels they subscribe to.**
-    
-4. **A message can be delivered to multiple active subscribers.**
-    
-5. **Redis Pub/Sub is real-time but ephemeral.**
-    
-6. **Messages are not persisted for later subscribers.**
-    
-7. **There is no replay mechanism in basic Redis Pub/Sub.**
-    
-8. **Pub/Sub is useful for chat, notifications, live updates, and other real-time events.**
-    
-9. **For durable messaging and replay, use systems such as Kafka or Redis Streams.**
-    
-10. **The fundamental trade-off is simplicity and low latency versus durability and replayability.**

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "System Design/04-Async Processing.md",
+                "file": "System Design/05-Resiliency.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "04-Async Processing"
+              "title": "05-Resiliency"
             }
           }
         ]
@@ -185,39 +185,40 @@
       "bases:Create new base": false
     }
   },
-  "active": "f539e29402b40860",
+  "active": "1575dfe000fc5b1e",
   "lastOpenFiles": [
-    "System Design/implementations/assignment-4/target/debug/build/rdkafka-sys-6d2334f77820c504/out/build/src/CMakeFiles/rdkafka.dir/opentelemetry/resource.pb.c.o.d",
-    "System Design/implementations/assignment-4/target/debug/build/rdkafka-sys-6d2334f77820c504/out/build/src/CMakeFiles/rdkafka.dir/opentelemetry/resource.pb.c.o",
-    "System Design/implementations/assignment-4/target/debug/build/rdkafka-sys-6d2334f77820c504/out/build/src/CMakeFiles/rdkafka.dir/opentelemetry/metrics.pb.c.o.d",
-    "System Design/implementations/assignment-4/target/debug/build/rdkafka-sys-6d2334f77820c504/out/build/src/CMakeFiles/rdkafka.dir/opentelemetry/metrics.pb.c.o",
-    "System Design/implementations/assignment-4/target/debug/build/rdkafka-sys-6d2334f77820c504/out/build/src/CMakeFiles/rdkafka.dir/opentelemetry/common.pb.c.o.d",
-    "System Design/implementations/assignment-4/target/debug/build/rdkafka-sys-6d2334f77820c504/out/build/src/CMakeFiles/rdkafka.dir/opentelemetry/common.pb.c.o",
-    "System Design/implementations/assignment-4/target/debug/build/rdkafka-sys-6d2334f77820c504/out/build/src/CMakeFiles/rdkafka.dir/nanopb/pb_common.c.o.d",
-    "System Design/implementations/assignment-4/target/debug/build/rdkafka-sys-6d2334f77820c504/out/build/src/CMakeFiles/rdkafka.dir/nanopb/pb_encode.c.o.d",
-    "System Design/implementations/assignment-4/target/debug/build/rdkafka-sys-6d2334f77820c504/out/build/src/CMakeFiles/rdkafka.dir/nanopb/pb_encode.c.o",
-    "System Design/implementations/assignment-4/target/debug/build/rdkafka-sys-6d2334f77820c504/out/build/src/CMakeFiles/rdkafka.dir/nanopb/pb_decode.c.o.d",
-    "System Design/implementations/assignment-4/target/debug/build/rdkafka-sys-6d2334f77820c504/out/build/src/CMakeFiles/rdkafka.dir/nanopb/pb_decode.c.o",
-    "System Design/assets/pubsub.png",
-    "System Design/assets/multiple-service.png",
-    "System Design/assets/buffer.png",
-    "System Design/assets/overloaded.png",
+    "System Design/implementations/assignment-5/target/debug/build/serde-e94270e07ed50c08/out/private.rs",
+    "System Design/implementations/assignment-5/target/debug/build/serde_core-d36af5fe17af763a/out/private.rs",
+    "System Design/implementations/assignment-5/target/debug/incremental/lb-2ruye10y4q8ou/s-hlfk9ttfya-185ikbl-0v7149p3cawjg3g8nx7r906ty/work-products.bin",
+    "System Design/implementations/assignment-5/target/debug/incremental/lb-2ruye10y4q8ou/s-hlfk9ttfya-185ikbl-0v7149p3cawjg3g8nx7r906ty/query-cache.bin",
+    "System Design/implementations/assignment-5/target/debug/incremental/lb-2ruye10y4q8ou/s-hlfk9ttfya-185ikbl-0v7149p3cawjg3g8nx7r906ty/ez0lqsrp1v1edy759nhc94535.o",
+    "System Design/implementations/assignment-5/target/debug/incremental/lb-2ruye10y4q8ou/s-hlfk9ttfya-185ikbl-0v7149p3cawjg3g8nx7r906ty/eroxi56tyl3wif468x7x1wm28.o",
+    "System Design/implementations/assignment-5/target/debug/incremental/lb-2ruye10y4q8ou/s-hlfk9ttfya-185ikbl-0v7149p3cawjg3g8nx7r906ty/en5vzhbw3nmrvkthfjs4ex18b.o",
+    "System Design/implementations/assignment-5/target/debug/incremental/lb-2ruye10y4q8ou/s-hlfk9ttfya-185ikbl-0v7149p3cawjg3g8nx7r906ty/ectegqulu1ugv5kri7p839hu7.o",
+    "System Design/implementations/assignment-5/target/debug/incremental/lb-2ruye10y4q8ou/s-hlfk9ttfya-185ikbl-0v7149p3cawjg3g8nx7r906ty/e8h69hov3lnp6z0perm11087o.o",
+    "System Design/implementations/assignment-5/target/debug/incremental/lb-2ruye10y4q8ou/s-hlfk9ttfya-185ikbl-0v7149p3cawjg3g8nx7r906ty/dp2twik6zivblzv0we9907bjl.o",
+    "System Design/implementations/assignment-5/target/debug/incremental/lb-2ruye10y4q8ou/s-hlfk9ttfya-185ikbl-0v7149p3cawjg3g8nx7r906ty/dep-graph.bin",
     "System Design/04-Async Processing.md",
-    "System Design/assets/messagequeue.png",
-    "Words.md",
-    "System Design/assets/message.png",
     "System Design/03-Cache.md",
-    "System Design/assets/messagebroker.png",
     "System Design/02-Relational databases.md",
-    "System Design/assets/proactivelypushing.png",
+    "System Design/assets/relation-databases/horizontal-scalling.png",
+    "System Design/assets/relation-databases/ledgers.png",
+    "System Design/assets/relation-databases/single-leader.png",
+    "System Design/assets/relation-databases/replication.png",
+    "System Design/assets/relation-databases/read-uncommitted.png",
+    "System Design/assets/relation-databases/read-committed.png",
+    "System Design/assets/relation-databases/serializable.png",
+    "System Design/01-Introduction.md",
+    "System Design/05-Resiliency.md",
+    "System Design/assets/resiliency/availability.png",
+    "System Design/assets/resiliency/loadbalancer.png",
+    "System Design/assets/resiliency/withoutloadbalancer.png",
+    "Words.md",
     "Distributed System/Sharding in depth.md",
-    "System Design/assets/lazypopulation.png",
-    "System Design/assets/eagercache.png",
     "I-love-react/node_modules/nanoid/README.md",
     "I-love-react/node_modules/@types/babel__generator/README.md",
     "I-love-react/node_modules/react-router-dom/README.md",
     "I-love-react/node_modules/zustand/README.md",
-    "System Design/01-Introduction.md",
     "I-love-react/node_modules/node-releases/README.md",
     "I-love-react/node_modules/jiti/README.md",
     "Deep learning/Perceptron/0-DL.md",
@@ -232,7 +233,6 @@
     "Papers implementations/Chord paper.md",
     "DBMS/Day-2.md",
     "DBMS/Day-1.md",
-    "Distributed System/Chapter-1/Maintainability.md",
     "Untitled.canvas"
   ]
 }
