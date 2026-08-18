@@ -1,3 +1,5 @@
+use axum::{Router, extract::State, routing::get};
+use reqwest::Client;
 use std::sync::Arc;
 use tokio::sync::Mutex;
 
@@ -23,21 +25,50 @@ impl LoadBalancer {
     }
 }
 
+#[derive(Clone)]
+struct AppState {
+    lb: Arc<Mutex<LoadBalancer>>,
+    client: Client,
+}
+
+async fn proxy(State(state): State<AppState>) -> String {
+    let server = {
+        let mut lb = state.lb.lock().await;
+        lb.next_server()
+    };
+
+    println!("Forwarding request to {}", server);
+
+    state
+        .client
+        .get(format!("{}/", server))
+        .send()
+        .await
+        .unwrap()
+        .text()
+        .await
+        .unwrap()
+}
+
 #[tokio::main]
 async fn main() {
     let servers = vec![
         "http://127.0.0.1:3001".to_string(),
         "http://127.0.0.1:3002".to_string(),
-        "http://127.0.0.1:3003".to_string(),
     ];
 
-    let lb = Arc::new(Mutex::new(LoadBalancer::new(servers)));
+    let state = AppState {
+        lb: Arc::new(Mutex::new(LoadBalancer::new(servers))),
+        client: Client::new(),
+    };
 
-    println!("load balancer running on: 3000");
+    let app = Router::new().route("/", get(proxy)).with_state(state);
 
-    loop {
-        let mut lb = lb.lock().await;
+    let listener = tokio::net::TcpListener::bind("127.0.0.1:3000")
+        .await
+        .unwrap();
 
-        println!("next server: {}", lb.next_server());
-    }
+    println!("Load balancer running on http://127.0.0.1:3000");
+
+    axum::serve(listener, app).await.unwrap();
 }

@@ -9,7 +9,7 @@ async fn main() {
     let app = Router::new()
         .route(
             "/",
-            get(move || async move { format!("hello from server {}", port) }),
+            get(move || async move { format!("Hello from server {}", port) }),
         )
         .route("/health", get(|| async { "OK" }));
 
@@ -17,8 +17,7 @@ async fn main() {
 
     let listener = TcpListener::bind(&addr).await.unwrap();
 
-    println!("server running on: {}", addr);
+    println!("Server running on {}", addr);
 
     axum::serve(listener, app).await.unwrap();
 }
-
