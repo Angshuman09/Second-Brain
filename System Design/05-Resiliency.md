@@ -153,16 +153,7 @@ Typically uses:
 
 It doesn't need to understand the HTTP request itself.
 
-```text
-Client
-  |
-TCP connection
-  |
-L4 Load Balancer
-  |
-  +──> Server 1
-  +──> Server 2
-```
+![[l4.png]]
 
 Because it operates at a lower level, it can be very fast.
 
@@ -670,3 +661,435 @@ Remember a load balancer as three fundamental responsibilities:
 The ultimate goal is:
 
 > **Distribute traffic efficiently while keeping the service scalable and available.**
+
+---
+
+# Circuit Breaker
+
+A **circuit breaker** is a resilience pattern used in distributed systems to prevent repeated requests to a failing or unhealthy service.
+
+Its main purpose is to **fail fast and prevent cascading failures**.
+
+## Why do we need a Circuit Breaker?
+
+Consider:
+
+```text
+Client
+   ↓
+Service A
+   ↓
+Service B
+```
+
+If Service B becomes slow or unavailable, Service A may continue sending requests:
+
+```text
+Request → B → failure
+Request → B → failure
+Request → B → failure
+Request → B → failure
+...
+```
+
+This can cause:
+
+- Increased latency
+    
+- Wasted resources
+    
+- Connection/thread exhaustion
+    
+- More load on an already failing service
+    
+- Cascading failures across multiple services
+    
+
+A circuit breaker detects repeated failures and temporarily stops sending requests to the failing service.
+
+---
+
+# Circuit Breaker States
+
+A circuit breaker generally has three states:
+
+![[state.png]]
+
+## 1. Closed
+
+Normal operation.
+
+Requests are allowed to reach the downstream service.
+
+![[cb.png]]
+
+The circuit breaker monitors failures.
+
+For example:
+
+```text
+Failure threshold = 3
+
+Request 1 → Success
+Request 2 → Success
+Request 3 → Failure
+Request 4 → Success
+Request 5 → Failure
+Request 6 → Failure
+```
+
+Once the configured failure threshold is reached:
+
+```text
+CLOSED → OPEN
+```
+
+---
+
+## 2. Open
+
+The downstream service is considered unhealthy.
+
+Requests are **not sent** to it.
+
+```text
+Service A
+    ↓
+Circuit Breaker
+    X
+    ↓
+Service B
+```
+
+Instead, the circuit breaker immediately rejects the request or returns a fallback response.
+
+This is called **fail fast**.
+
+For example:
+
+```text
+Request → Circuit Breaker → rejected immediately
+```
+
+The breaker stays open for a configured period.
+
+Example:
+
+```text
+Open timeout = 10 seconds
+```
+
+---
+
+## 3. Half-Open
+
+After the timeout expires, the circuit breaker enters the half-open state.
+
+It allows a limited number of requests through to test whether the downstream service has recovered.
+
+```text
+Service A
+    ↓
+Circuit Breaker
+    ↓
+Service B
+```
+
+### If the request succeeds:
+
+```text
+HALF-OPEN → CLOSED
+```
+
+Normal traffic resumes.
+
+### If the request fails:
+
+```text
+HALF-OPEN → OPEN
+```
+
+The breaker starts another cooldown period.
+
+---
+
+# Example
+
+Suppose:
+
+```text
+Failure threshold = 3
+Open timeout = 5 seconds
+```
+
+Initially:
+
+```text
+CLOSED
+```
+
+Three consecutive failures:
+
+```text
+Request 1 → failure
+Request 2 → failure
+Request 3 → failure
+
+CLOSED → OPEN
+```
+
+For the next 5 seconds:
+
+```text
+Request 4 → rejected
+Request 5 → rejected
+Request 6 → rejected
+```
+
+After 5 seconds:
+
+```text
+OPEN → HALF-OPEN
+```
+
+The circuit allows a test request.
+
+If the service has recovered:
+
+```text
+Test request → success
+
+HALF-OPEN → CLOSED
+```
+
+If it is still failing:
+
+```text
+Test request → failure
+
+HALF-OPEN → OPEN
+```
+
+---
+
+# What does a Circuit Breaker monitor?
+
+A circuit breaker can consider different signals:
+
+- Number of failures
+    
+- Failure rate
+    
+- Timeout rate
+    
+- Connection errors
+    
+- HTTP 5xx responses
+    
+- Response latency
+    
+
+For example:
+
+```text
+Open circuit if:
+
+failure rate > 50%
+over the last 100 requests
+```
+
+The exact strategy depends on the system.
+
+---
+
+# Circuit Breaker vs Retry
+
+These solve different problems.
+
+### Retry
+
+Retry says:
+
+> "The request failed. Try again."
+
+```text
+Request
+   ↓
+Failure
+   ↓
+Retry
+   ↓
+Service
+```
+
+### Circuit Breaker
+
+Circuit breaker says:
+
+> "This service keeps failing. Stop sending requests for a while."
+
+```text
+Request
+   ↓
+Circuit Breaker
+   X
+Service
+```
+
+They can be used together, but excessive retries can make an outage worse by generating even more traffic toward an unhealthy service.
+
+---
+
+# Circuit Breaker vs Timeout
+
+A **timeout** limits how long we wait for a request.
+
+```text
+Request → Service
+             ↓
+          2 seconds
+             ↓
+          timeout
+```
+
+A **circuit breaker** decides whether requests should be sent at all based on the service's recent behavior.
+
+They are often used together:
+
+```text
+Request
+   ↓
+Circuit Breaker
+   ↓
+Timeout
+   ↓
+Service
+```
+
+---
+
+# Fallback
+
+When the circuit is open, the application can sometimes return a fallback response instead of an error.
+
+For example, for a recommendation service:
+
+```text
+Recommendation Service
+        ↓
+      fails
+        ↓
+Circuit Breaker OPEN
+        ↓
+Return cached/popular recommendations
+```
+
+This is useful when the dependency is **non-critical**.
+
+---
+
+# Circuit Breaker in a Distributed System
+
+Consider:
+
+```text
+                    ┌── Payment Service
+                    │
+Order Service ──────┼── Inventory Service
+                    │
+                    └── Recommendation Service
+```
+
+If Recommendation Service fails, you don't necessarily want the entire Order Service to fail.
+
+A circuit breaker can isolate the failure:
+
+```text
+Order Service
+      ↓
+Circuit Breaker
+      X
+Recommendation Service
+```
+
+The rest of the system can continue operating.
+
+This is called **fault isolation**.
+
+---
+
+# Important Benefits
+
+### 1. Fail fast
+
+Don't waste time waiting for a service that is known to be unhealthy.
+
+### 2. Prevent cascading failures
+
+A failure in one service doesn't necessarily propagate to dependent services.
+
+### 3. Reduce load on failing services
+
+When the circuit is open, requests stop reaching the unhealthy service.
+
+### 4. Allow recovery
+
+The half-open state periodically tests whether the service has recovered.
+
+### 5. Improve system resilience
+
+The system can continue operating even when some dependencies are temporarily unavailable.
+
+---
+
+# Important Parameters
+
+A real circuit breaker usually needs configuration such as:
+
+```text
+Failure threshold
+Failure rate threshold
+Timeout
+Open-state duration
+Number of half-open test requests
+Sliding window
+```
+
+For example:
+
+```text
+Failure rate:       50%
+Window:             100 requests
+Open duration:      10 seconds
+Half-open requests: 3
+```
+
+---
+
+# Simple Mental Model
+
+Remember it as:
+
+```text
+CLOSED
+Normal traffic
+     ↓
+Too many failures
+     ↓
+OPEN
+Reject requests / fail fast
+     ↓
+Wait
+     ↓
+HALF-OPEN
+Test the service
+     ↓
+   ┌───────┴───────┐
+Success           Failure
+   ↓                 ↓
+CLOSED              OPEN
+```
+
+**Core idea:**
+
+> A circuit breaker stops repeatedly calling an unhealthy dependency, fails fast during the outage, and periodically tests whether the dependency has recovered.
