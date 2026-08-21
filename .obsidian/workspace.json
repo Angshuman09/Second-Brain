@@ -11,14 +11,10 @@
             "id": "f539e29402b40860",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "System Design/05-Resiliency.md",
-                "mode": "preview",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "05-Resiliency"
+              "title": "New tab"
             }
           }
         ]
@@ -185,8 +181,13 @@
       "bases:Create new base": false
     }
   },
-  "active": "f539e29402b40860",
+  "active": "1575dfe000fc5b1e",
   "lastOpenFiles": [
+    "projects/Matrichub.md",
+    "projects/features.md",
+    "Papers implementations/Papers.md",
+    "Papers implementations/Chord paper.md",
+    "System Design/05-Resiliency.md",
     "System Design/implementations/assignment-6/target/debug/deps/libpost-bde307c351fc1576.rmeta",
     "System Design/implementations/assignment-6/target/debug/deps/libpost-362dd9b2bf9eb959.rmeta",
     "System Design/implementations/assignment-6/target/debug/incremental/post-1p5hqtob6y8da/s-hlhszct4da-1n3oy8o-22q1e3hetn5g70kh2kh7m73kl/work-products.bin",
@@ -197,9 +198,7 @@
     "System Design/implementations/assignment-6/target/debug/deps/libprofile-f3e956b7cc8ef43a.rmeta",
     "System Design/implementations/assignment-6/target/debug/deps/libassignment_6-6a3f8bd8402c8c7f.rmeta",
     "System Design/implementations/assignment-6/target/debug/deps/post-362dd9b2bf9eb959.d",
-    "System Design/implementations/assignment-6/target/debug/deps/libassignment_6-10e7987af63a84b5.rmeta",
     "System Design/assets/resiliency/cb.png",
-    "System Design/05-Resiliency.md",
     "System Design/assets/resiliency/state.png",
     "System Design/assets/resiliency/Screenshot 2026-08-19 at 7.20.42 PM.png",
     "DBMS/Day-1.md",
@@ -226,13 +225,9 @@
     "Deep learning/Perceptron/0-DL.md",
     "Low Level/Input  Buffer.md",
     "Low Level/Basics.md",
-    "Papers implementations/Papers.md",
-    "projects/features.md",
-    "projects/Matrichub.md",
     "human brain/02-Different types of aggressions.md",
     "human brain/01-Difference between compassion, empathy and sympathy?.md",
     "human brain/00-How we think?.md",
-    "Papers implementations/Chord paper.md",
     "Untitled.canvas"
   ]
 }
