@@ -664,6 +664,7 @@ The ultimate goal is:
 
 ---
 
+# <span style="color: pink;">Day-2</span>
 # Circuit Breaker
 
 A **circuit breaker** is a resilience pattern used in distributed systems to prevent repeated requests to a failing or unhealthy service.
