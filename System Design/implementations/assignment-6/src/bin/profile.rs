@@ -1,29 +1,56 @@
-use axum::{Router, http::StatusCode, routing::get};
+use axum::{Router, http::StatusCode, extract::State, routing::{get, post}};
 use std::net::SocketAddr;
+use std::sync::Arc;
+use tokio::sync::Mutex;
 
-async fn profile() -> (StatusCode, &'static str) {
-    (
-        StatusCode::INTERNAL_SERVER_ERROR,
-        r#"{"error":"profile service failed"}"#,
-    )
+#[derive(Clone)]
+struct AppState{
+    healthy: Arc<Mutex<bool>>
 }
 
-async fn fail() -> (StatusCode, &'static str) {
+async fn profile(State(state): State<AppState>) -> (StatusCode, String) {
+    let healthy = *state.healthy.lock().await;
+
+    if healthy{
     (
-        StatusCode::INTERNAL_SERVER_ERROR,
-        r#"{"error":"profile service failed"}"#,
-    )
+        StatusCode::OK,
+        r#"{"name":"Angshu","age":21}"#.to_string(),
+    )   
+    }else{
+        (
+            StatusCode::INTERNAL_SERVER_ERROR,
+            r#"{"error":"profile service failed"}"#.to_string(),
+        )
+    }
+}
+
+async fn fail(State(state): State<AppState>) ->  &'static str{
+    let mut healthy = state.healthy.lock().await;
+    *healthy = false;
+    "profile service is now failing"
+}
+
+async fn recover(State(state): State<AppState>) -> &'static str{
+    let mut healthy = state.healthy.lock().await;
+    *healthy = true;
+    "profile service recovered"
 }
 
 #[tokio::main]
 async fn main() {
+    let state = AppState{
+        healthy: Arc::new(Mutex::new(true))
+    };
+
     let app = Router::new()
         .route("/profile", get(profile))
-        .route("/fail", get(fail));
+        .route("/fail", post(fail))
+        .route("/recover", post(recover))
+        .with_state(state);
 
-    let addr = SocketAddr::from(([127, 0, 0, 1], 3001));
+    let addr = SocketAddr::from(([127,0,0,1], 3001));
 
-    println!("profile service running in the port: {}", addr);
+    println!("profile service running on: http://{}", addr);
 
     let listener = tokio::net::TcpListener::bind(addr).await.unwrap();
 

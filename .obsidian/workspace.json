@@ -11,10 +11,14 @@
             "id": "f539e29402b40860",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "System Design/05-Resiliency.md",
+                "mode": "preview",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "05-Resiliency"
             }
           }
         ]
@@ -181,23 +185,24 @@
       "bases:Create new base": false
     }
   },
-  "active": "1575dfe000fc5b1e",
+  "active": "f539e29402b40860",
   "lastOpenFiles": [
+    "System Design/implementations/assignment-6/src/lib.rs",
+    "System Design/implementations/assignment-6/target/debug/incremental/profile-2wth2a0yj6duy/s-hlkk7jtipf-0hrxaoq-c7jlzlxnrlmfn73rvtp913zak/work-products.bin",
+    "System Design/implementations/assignment-6/target/debug/incremental/profile-2wth2a0yj6duy/s-hlkk7jtipf-0hrxaoq-c7jlzlxnrlmfn73rvtp913zak/query-cache.bin",
+    "System Design/implementations/assignment-6/target/debug/incremental/profile-2wth2a0yj6duy/s-hlkk7jtipf-0hrxaoq-c7jlzlxnrlmfn73rvtp913zak/dep-graph.bin",
+    "System Design/implementations/assignment-6/target/debug/incremental/profile-2wth2a0yj6duy/s-hlkk7jtipf-0hrxaoq-c7jlzlxnrlmfn73rvtp913zak",
+    "System Design/implementations/assignment-6/target/debug/incremental/profile-0zy2j9j4dtse7/s-hlkk7jtgpz-1it6cb8-4jorpfrs4o36t2zqrzl59a9p0/work-products.bin",
+    "System Design/implementations/assignment-6/target/debug/incremental/profile-0zy2j9j4dtse7/s-hlkk7jtgpz-1it6cb8-4jorpfrs4o36t2zqrzl59a9p0/query-cache.bin",
+    "System Design/implementations/assignment-6/target/debug/incremental/profile-0zy2j9j4dtse7/s-hlkk7jtgpz-1it6cb8-4jorpfrs4o36t2zqrzl59a9p0/dep-graph.bin",
+    "System Design/implementations/assignment-6/target/debug/incremental/profile-0zy2j9j4dtse7/s-hlkk7jtgpz-1it6cb8-4jorpfrs4o36t2zqrzl59a9p0",
+    "System Design/implementations/assignment-6/target/debug/incremental/assignment_6-3sshfglain5ux/s-hlkk7jtiv8-1aix6v5-f4d6nxoj137grtj0uxgz313dj/work-products.bin",
+    "System Design/implementations/assignment-6/target/debug/incremental/assignment_6-3sshfglain5ux/s-hlkk7jtiv8-1aix6v5-f4d6nxoj137grtj0uxgz313dj/query-cache.bin",
     "projects/Matrichub.md",
     "projects/features.md",
     "Papers implementations/Papers.md",
     "Papers implementations/Chord paper.md",
     "System Design/05-Resiliency.md",
-    "System Design/implementations/assignment-6/target/debug/deps/libpost-bde307c351fc1576.rmeta",
-    "System Design/implementations/assignment-6/target/debug/deps/libpost-362dd9b2bf9eb959.rmeta",
-    "System Design/implementations/assignment-6/target/debug/incremental/post-1p5hqtob6y8da/s-hlhszct4da-1n3oy8o-22q1e3hetn5g70kh2kh7m73kl/work-products.bin",
-    "System Design/implementations/assignment-6/target/debug/incremental/post-1p5hqtob6y8da/s-hlhszct4da-1n3oy8o-22q1e3hetn5g70kh2kh7m73kl/query-cache.bin",
-    "System Design/implementations/assignment-6/target/debug/incremental/post-1p5hqtob6y8da/s-hlhszct4da-1n3oy8o-22q1e3hetn5g70kh2kh7m73kl/dep-graph.bin",
-    "System Design/implementations/assignment-6/target/debug/incremental/post-1p5hqtob6y8da/s-hlhszct4da-1n3oy8o-22q1e3hetn5g70kh2kh7m73kl",
-    "System Design/implementations/assignment-6/target/debug/deps/libprofile-0b962abeb7639699.rmeta",
-    "System Design/implementations/assignment-6/target/debug/deps/libprofile-f3e956b7cc8ef43a.rmeta",
-    "System Design/implementations/assignment-6/target/debug/deps/libassignment_6-6a3f8bd8402c8c7f.rmeta",
-    "System Design/implementations/assignment-6/target/debug/deps/post-362dd9b2bf9eb959.d",
     "System Design/assets/resiliency/cb.png",
     "System Design/assets/resiliency/state.png",
     "System Design/assets/resiliency/Screenshot 2026-08-19 at 7.20.42 PM.png",
