@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "I-Love-Rust/experiments/experiment-1/Why Arc<[T]> is faster than is faster than Vec<T>.md",
-                "mode": "preview",
+                "file": "OS/02-Types of Operating System.md",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Why Arc<[T]> is faster than is faster than Vec<T>"
+              "title": "02-Types of Operating System"
             }
           }
         ]
@@ -80,7 +80,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200.31328964233398
   },
   "right": {
     "id": "b8eb9ab38dd385e3",
@@ -185,8 +185,17 @@
       "bases:Create new base": false
     }
   },
-  "active": "1575dfe000fc5b1e",
+  "active": "f539e29402b40860",
   "lastOpenFiles": [
+    "OS/01-Introduction.md",
+    "OS/02-Types of Operating System.md",
+    "OS/assets/part-1/dualmode.png",
+    "OS/assets/part-1",
+    "OS/assets/systemcall.png",
+    "OS/assets/part-1/partsofos.png",
+    "OS/assets",
+    "I-Love-Rust/experiments/experiment-1/Why Arc<[T]> is faster than is faster than Vec<T>.md",
+    "OS",
     "I-Love-Rust/experiments/experiment-1/exp-1/target/debug/test1.d",
     "I-Love-Rust/experiments/experiment-1/exp-1/target/debug/test1",
     "I-Love-Rust/experiments/experiment-1/exp-1/target/debug/deps/test1-4b2aadf0c436a3d3",
@@ -194,15 +203,10 @@
     "I-Love-Rust/experiments/experiment-1/exp-1/target/debug/incremental/test1-0l9dnp3gwb5s2/s-hma06gyos2-119mu9o-b5aysmww5m5nshbkmdann4sga/query-cache.bin",
     "I-Love-Rust/experiments/experiment-1/exp-1/target/debug/incremental/test1-0l9dnp3gwb5s2/s-hma06gyos2-119mu9o-b5aysmww5m5nshbkmdann4sga/exf2ugwlrldfwbuxqqzflumvw.o",
     "I-Love-Rust/experiments/experiment-1/exp-1/target/debug/incremental/test1-0l9dnp3gwb5s2/s-hma06gyos2-119mu9o-b5aysmww5m5nshbkmdann4sga/etlvm1ag6a62l91sum6jzu9g2.o",
-    "I-Love-Rust/experiments/experiment-1/exp-1/target/debug/incremental/test1-0l9dnp3gwb5s2/s-hma06gyos2-119mu9o-b5aysmww5m5nshbkmdann4sga/esbsuqi06megfvzhxzps3hwvf.o",
-    "I-Love-Rust/experiments/experiment-1/exp-1/target/debug/incremental/test1-0l9dnp3gwb5s2/s-hma06gyos2-119mu9o-b5aysmww5m5nshbkmdann4sga/ehx3jxivhq7dtly6jhk8jnpf2.o",
-    "I-Love-Rust/experiments/experiment-1/exp-1/target/debug/incremental/test1-0l9dnp3gwb5s2/s-hma06gyos2-119mu9o-b5aysmww5m5nshbkmdann4sga/e1xhjlog6lsftviqxa4s5y0ym.o",
-    "I-Love-Rust/experiments/experiment-1/exp-1/target/debug/incremental/test1-0l9dnp3gwb5s2/s-hma06gyos2-119mu9o-b5aysmww5m5nshbkmdann4sga/dypzwouo03ehd9r38vfkeket9.o",
     "I-Love-Rust/assets/result.png",
     "I-Love-Rust/assets/vec.png",
     "I-Love-Rust/assets/vec.png",
     "System Design/03-Cache.md",
-    "I-Love-Rust/experiments/experiment-1/Why Arc<[T]> is faster than is faster than Vec<T>.md",
     "System Design/04-Async Processing.md",
     "System Design/05-Resiliency.md",
     "System Design/01-Introduction.md",
@@ -217,9 +221,6 @@
     "DBMS/Day-1.md",
     "DBMS/Day-2.md",
     "System Design/assets/resiliency/l4.png",
-    "System Design/assets/relation-databases/read-repeated.png",
-    "System Design/assets/relation-databases/read-committed.png",
-    "System Design/assets/relation-databases/horizontal-scalling.png",
     "Words.md",
     "Distributed System/Sharding in depth.md",
     "I-love-react/node_modules/nanoid/README.md",
@@ -232,7 +233,6 @@
     "Low Level/Input  Buffer.md",
     "Low Level/Basics.md",
     "human brain/02-Different types of aggressions.md",
-    "human brain/01-Difference between compassion, empathy and sympathy?.md",
     "Untitled.canvas"
   ]
 }
