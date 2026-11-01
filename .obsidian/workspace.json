@@ -11,14 +11,13 @@
             "id": "f539e29402b40860",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "bases",
               "state": {
-                "file": "OS/03-Program Management.md",
-                "mode": "preview",
-                "source": false
+                "file": "Untitled.base",
+                "viewName": "Table"
               },
-              "icon": "lucide-file",
-              "title": "03-Program Management"
+              "icon": "lucide-table",
+              "title": "Untitled"
             }
           }
         ]
@@ -187,8 +186,9 @@
   },
   "active": "f539e29402b40860",
   "lastOpenFiles": [
-    "OS/02-Types of Operating System.md",
     "OS/03-Program Management.md",
+    "Untitled.base",
+    "OS/02-Types of Operating System.md",
     "OS/assets/part-2/degreeofmultiprogramming.png",
     "OS/assets/part-2/multiprogramming.png",
     "OS/assets/part-2/uniprogramming.png",
@@ -207,7 +207,6 @@
     "I-Love-Rust/experiments/experiment-1/exp-1/target/debug/test1",
     "I-Love-Rust/experiments/experiment-1/exp-1/target/debug/deps/test1-4b2aadf0c436a3d3",
     "I-Love-Rust/experiments/experiment-1/exp-1/target/debug/incremental/test1-0l9dnp3gwb5s2/s-hma06gyos2-119mu9o-b5aysmww5m5nshbkmdann4sga/work-products.bin",
-    "I-Love-Rust/experiments/experiment-1/exp-1/target/debug/incremental/test1-0l9dnp3gwb5s2/s-hma06gyos2-119mu9o-b5aysmww5m5nshbkmdann4sga/query-cache.bin",
     "I-Love-Rust/assets/result.png",
     "I-Love-Rust/assets/vec.png",
     "I-Love-Rust/assets/vec.png",
@@ -232,7 +231,6 @@
     "I-love-react/node_modules/jiti/README.md",
     "Deep learning/Perceptron/0-DL.md",
     "Low Level/Input  Buffer.md",
-    "Low Level/Basics.md",
     "Untitled.canvas"
   ]
 }
